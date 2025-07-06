@@ -1,0 +1,11 @@
+
+# Playwright
+node_modules/
+/src/test-results/
+/playwright-report/
+/blob-report/
+/playwright/.cache/
+/src/screenshots/
+/env/.env
+package-lock.json
+/tests/register.spec.ts-snapshots
