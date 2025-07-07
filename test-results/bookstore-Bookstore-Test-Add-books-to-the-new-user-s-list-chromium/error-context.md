@@ -1,0 +1,54 @@
+# Page snapshot
+
+```yaml
+- img "adplus-dvertising"
+- iframe
+- banner:
+  - link:
+    - /url: https://demoqa.com
+    - img
+- img
+- text: Elements
+- img
+- img
+- text: Forms
+- img
+- img
+- text: Alerts, Frame & Windows
+- img
+- img
+- text: Widgets
+- img
+- img
+- text: Interactions
+- img
+- img
+- text: Book Store Application
+- img
+- list:
+  - listitem:
+    - img
+    - text: Login
+  - listitem:
+    - img
+    - text: Book Store
+  - listitem:
+    - img
+    - text: Profile
+  - listitem:
+    - img
+    - text: Book Store API
+- heading "Login" [level=1]
+- heading "Welcome," [level=2]
+- heading "Login in Book Store" [level=5]
+- text: "UserName :"
+- textbox "UserName"
+- text: "Password :"
+- textbox "Password"
+- button "Login"
+- button "New User"
+- iframe
+- img "Build PlayWright tests with AI"
+- iframe
+- contentinfo: © 2013-2020 TOOLSQA.COM | ALL RIGHTS RESERVED.
+```

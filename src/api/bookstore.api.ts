@@ -25,4 +25,11 @@ export class BookstoreAPI {
             data: { userId }
         });
     }
+
+    async deleteBook(isbn: string, userId: string, token: string) {
+        return this.request.delete(`${this.base}/Bookstore/v1/Book`, {
+            headers: { Authorization: `Bearer ${token}` },
+            data: { isbn, userId }
+        });
+    }
 }

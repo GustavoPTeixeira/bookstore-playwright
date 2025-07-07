@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 import { faker } from '@faker-js/faker';
-import { RegisterPage } from '../src/pages/register.page';
+import { RegisterPage } from '../src/pages/register-page';
+import { AccountAPI } from '../src/api/account.api';
 
 
 test.describe('Register Test', () => {
@@ -10,27 +11,13 @@ test.describe('Register Test', () => {
         }
     });
 
-    test('Register a new user via UI', async ({ page }) => {
+    test('Register a new user via API', async ({ page, request }) => {
         const user = {
             userName: faker.internet.username(),
-            password: faker.internet.password(),
-            firstName: faker.person.firstName(),
-            lastName: faker.person.lastName(),
+            password: "$Teste123",
         }
 
-        const rp = new RegisterPage(page, page.request);
-        await rp.open();
-        await rp.registerViaUI(user);
+        const acAPI = new AccountAPI(page.request);
+        await acAPI.createUserViaAPI(user);
     })
-
-    test('Register a new user via API', async ({ page }) => {
-        const user = {
-            userName: faker.internet.username(),
-            password: faker.internet.password(),
-        }
-
-        const rp = new RegisterPage(page, page.request);
-        await rp.createUser(user);
-    })
-
 })

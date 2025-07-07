@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { LoginPage } from '../src/pages/login.page';
+import { LoginPage } from '../src/pages/login-page';
 import * as dotenv from 'dotenv';
 
 test.describe('Login Test', () => {
@@ -9,7 +9,7 @@ test.describe('Login Test', () => {
         }
     })
 
-    
+
 
     test('Login with valid credentials and logout', async ({ page }) => {
         const user = {
